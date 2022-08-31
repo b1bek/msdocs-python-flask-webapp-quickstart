@@ -24,6 +24,10 @@ def hello():
        print('Request for hello page received with no name or blank name -- redirecting')
        return redirect(url_for('index'))
 
-
+@app.route('/')
+def poc():
+   print('Request for POC page received')
+   return "Subdomain Takeover by bibekshah"
+   
 if __name__ == '__main__':
    app.run()
